@@ -1,0 +1,6 @@
+#\!/usr/bin/env sh
+echo "Installing..."
+
+# link shell settings to $HOME
+ln -sv /Users/erik/.dotfiles/bash/bashrc ~/.bashrc
+
