@@ -1,0 +1,4 @@
+set -o vi
+
+echo "will this show up?"
+
