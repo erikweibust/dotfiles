@@ -1,0 +1,13 @@
+# change java version
+function j10 {
+   export JAVA_HOME=$(/usr/libexec/java_home -v 10);
+   export PATH="$JAVA_HOME/bin:$PATH";
+   java -version
+}
+
+function j8 {
+   export JAVA_HOME=$(/usr/libexec/java_home -v 1.8);
+   export PATH="$JAVA_HOME/bin:$PATH";
+   java -version
+}
+# end change java versions
