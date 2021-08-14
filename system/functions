@@ -22,3 +22,7 @@ function ppath {
    echo $PATH | tr ':' '\n'
 }
 
+# create a new directory and cd into it
+function mk() {
+   mkdir -p "$@" && cd "$@"
+}
