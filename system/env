@@ -1,2 +1,13 @@
 # configure bash cmd-line to use vim keyboard cmds
 set -o vi
+
+# these flip back and forth between the installed java versions
+# as of 5/31/16 I didn't need this, but pulled from old .bashrc
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 10)"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
+
+# Need an env var to the current JDK's modules dir for Venkat's
+# Java Modules tutorials - Can probably remove this later
+export JMODS="$JAVA_HOME/jmods"
