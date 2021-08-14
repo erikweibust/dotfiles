@@ -1,0 +1,88 @@
+# I'm not sure where I got this alias file from... Therefore, I have 
+# commented out most of them until I know what they do.
+
+# Some example alias instructions
+# If these are enabled they will be used instead of any instructions
+# they may mask.  For example, alias rm='rm -i' will mask the rm
+# application.  To override the alias instruction use a \ before, ie
+# \rm will call the real rm not the alias.
+
+# Interactive operation...
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
+# Some shortcuts for different directory listings
+
+# On a mac I can't get --color=auto to work, looks like you need -G
+#alias ls='ls -hF --color=auto'
+
+# alias dir='ls --color=auto --format=vertical'
+# alias vdir='ls --color=auto --format=long'
+
+alias ls='ls -hF'    # -h is for human readable filesizes
+#alias ls='ls -hFG'  # -h is for human readable filesizes
+                     # -F adds / after dirs, * after executable files, etc.
+                     # -G enables colorized output
+
+alias la='ls -A'      # -A all but . and ..
+alias ll='ls -l'      # -l long list
+alias lla='ll -A'     # long list, with hidden files
+alias lart='ls -lArt' # -r reverses the order, -t sorts by timestamp
+
+# shortcut for clearing screen; cl is faster than clear ;)
+alias cl=clear
+
+# what is my ip address?
+alias ipa="groovy -e 'println InetAddress.localHost'"
+
+# what is my ip address?
+alias myip="curl http://ipecho.net/plain; echo"
+
+# what version of java?
+alias jv="java -version"
+
+# shortcut to ssh into my blog server on Dreamhost
+alias sshe="ssh erikweibust@weibust.net"
+
+# when using cat to see multiple files you never know where one ends
+# and the next begins. If you use the -n flag you get line numbers
+# which helps
+alias cat="cat -n"
+
+# configure less to show file name and % of file when displaying files
+alias less="less -M"
+
+# movement aliases
+alias ugc='cd /Users/erik/dev/projects/groovy/vega/apache-groovy-course'
+
+# shortcut names for longer app/utility names
+alias gc="groovyConsole"
+
+# git shortcuts
+alias gs="git status"
+alias grv="git remote -v"
+alias gpom="git push origin master"
+alias gpomn="git push origin main"
+alias glo='git log --oneline'
+alias gcm='git commit -m'
+alias glast='git log -1 HEAD --stat' # git list last commit log msg
+alias gvdiff='git difftool -t vimdiff -y' # git diff w/ vimtool skip prompt
+alias gsc='git rev-list --all | xargs git grep -F' # search within git commits
+
+# Junkyard
+#
+# Not sure why I'm keeping the stuff down here around
+
+# Misc :)
+# alias less='less -r'                          # raw control characters
+# alias whence='type -a'                        # where, of a sort
+# alias grep='grep --color'                     # show differences in colour
+# alias egrep='egrep --color=auto'              # show differences in colour
+# alias fgrep='fgrep --color=auto'              # show differences in colour
+
+alias l="echo aliases are great!"
