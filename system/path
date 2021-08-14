@@ -1,0 +1,9 @@
+# Want to make the java I set with JAVA_HOME the first in the path
+export PATH="$JAVA_HOME/bin:$PATH"
+
+export PATH="/Users/erik/dev/apps/kafka_2.12-2.8.0/bin:$PATH";
+
+# from Small Sharp Tools book - switch from BSD to GNU
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"
