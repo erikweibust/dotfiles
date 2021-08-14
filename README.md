@@ -14,7 +14,7 @@ The bashrc gets symlinked into my $HOME and then loads all the files in this rep
 
 I'm sure there is more but I'll feel better when crossing the above off.
 
-** Credits
+## Credits
 I followed allong with the following two blogs
 1. (http://iamnotmyself.com/2020/11/10/your-terminal-and-you-dotfiles/)
 2. (https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
