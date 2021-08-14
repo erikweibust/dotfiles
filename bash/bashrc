@@ -2,3 +2,11 @@ set -o vi
 
 echo "will this show up?"
 
+# still need to source this file until I port it's contents into my .dotfiles repo
+source /Users/erik/.bashrc-
+
+for DOTFILE in `find /Users/erik/.dotfiles/system`
+do
+   [ -f $DOTFILE ] && source $DOTFILE
+done
+

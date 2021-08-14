@@ -1,0 +1,2 @@
+# configure bash cmd-line to use vim keyboard cmds
+set -o vi
