@@ -11,3 +11,13 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 # Need an env var to the current JDK's modules dir for Venkat's
 # Java Modules tutorials - Can probably remove this later
 export JMODS="$JAVA_HOME/jmods"
+
+# Make bash append rather than overwrite the history on disk
+shopt -s histappend
+PROMPT_COMMAND='history -a;history -n'
+
+# this prints the Apple logo and some useful system info  when opening a
+# term screen. Issues may occur if offline which can be fixed by looking
+# at the archey help via the -h flag from the cmdline
+# Install archey via homebrew (brew install archey)
+archey
