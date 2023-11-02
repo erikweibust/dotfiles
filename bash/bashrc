@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 for DOTFILE in `find /Users/erik/.dotfiles/system`
 do
    [ -f $DOTFILE ] && source $DOTFILE
