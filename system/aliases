@@ -16,6 +16,10 @@ alias mv='mv -i'
 alias df='df -h'
 alias du='du -h'
 
+# show top 10 processes by mem or cpu
+alias psmem='ps auxc | sort -nr -k 4 | head -10'
+alias pscpu='ps auxc | sort -nr -k 3 | head -10'
+
 # Some shortcuts for different directory listings
 
 # On a mac I can't get --color=auto to work, looks like you need -G
@@ -52,7 +56,14 @@ alias sshe="ssh erikweibust@weibust.net"
 # when using cat to see multiple files you never know where one ends
 # and the next begins. If you use the -n flag you get line numbers
 # which helps
-alias cat="cat -n"
+#alias cat="cat -n"
+
+# installed bat via homebrew and now use it instead of cat
+# by default you get code formating and line numbers
+# you can just use line numbers with -n, and default to cat with -p
+alias cat="bat"
+alias catp="bat -p"
+alias catn="bat -n"
 
 # configure less to show file name and % of file when displaying files
 alias less="less -M"
