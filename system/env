@@ -12,6 +12,15 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 # Java Modules tutorials - Can probably remove this later
 export JMODS="$JAVA_HOME/jmods"
 
+# efw - 3/5/24
+# increase the in-memory history cmd size from default (500) 
+HISTSIZE=1000
+# inscrease the history file cmd size. This is used when you exit
+# terminal and it writes the in-memory cmds to file
+HISTFILESIZE=1000
+# Note: if HISTSIZE is > HISTFILESIZE you will lose cmds
+# when you exit terminal and it saves history to the file
+
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
 PROMPT_COMMAND='history -a;history -n'
