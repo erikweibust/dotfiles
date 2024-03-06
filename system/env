@@ -2,15 +2,14 @@
 set -o vi
 
 # these flip back and forth between the installed java versions
-# as of 5/31/16 I didn't need this, but pulled from old .bashrc
+# efw - 3/6/24
+# I commented-out this as I've been using SDKMAN for a bit.
+# I'm surprised things worked as this was not the "proper" Java_HOME
+# Let's hope nothing breaks now
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 #export JAVA_HOME="$(/usr/libexec/java_home -v 10)"
 #export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
-
-# Need an env var to the current JDK's modules dir for Venkat's
-# Java Modules tutorials - Can probably remove this later
-export JMODS="$JAVA_HOME/jmods"
 
 # efw - 3/5/24
 # increase the in-memory history cmd size from default (500) 
