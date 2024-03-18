@@ -69,7 +69,9 @@ alias catn="bat -n"
 alias less="less -M"
 
 # movement aliases
-alias ugc='cd /Users/erik/dev/projects/groovy/vega/apache-groovy-course'
+# I regularly move to my projects dir and sort by most recent to then 
+# open in VS code, or work from cmd-line. This is a shortcut for that
+alias dp='cd $HOME/dev/projects; lart'
 
 # shortcut names for longer app/utility names
 alias gc="groovyConsole"
