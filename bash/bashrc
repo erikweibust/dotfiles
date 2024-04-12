@@ -5,6 +5,11 @@ do
    [ -f $DOTFILE ] && source $DOTFILE
 done
 
+for DOTFILE in `find /Users/erik/.dotfiles/.secret`
+do
+   [ -f $DOTFILE ] && source $DOTFILE
+done
+
 # used this site to update to latest version of Bash
 # https://smallsharpsoftwaretools.com/tutorials/use_modern_bash_on_macos/
 
