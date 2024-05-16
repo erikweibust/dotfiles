@@ -5,6 +5,14 @@ Finally built a dotfiles repo. Have rolled my bashrc and aliases file into this 
 
 The bashrc gets symlinked into my $HOME and then loads all the files in this repo.
 
+To use:
+1. clone this repo to $HOME
+2. mv dotfile .dotfiles
+3. run ~/.dotfiles/install
+
+** to consider or improve:
+This only works if there is a .profile that loads .bashrc
+
 ## TODO:
 * bash_profile
 * vimrc
