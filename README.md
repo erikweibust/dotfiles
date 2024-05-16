@@ -4,6 +4,8 @@ Repo to store my dotfiles
 Finally built a dotfiles repo. Have rolled my bashrc and aliases file into this repo.
 
 The bashrc gets symlinked into my $HOME and then loads all the files in this repo.
+Note:
+This will only work if your username is erik. If not, you need to replace all instances of erik with your username.
 
 To use:
 1. clone this repo to $HOME
