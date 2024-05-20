@@ -87,6 +87,9 @@ alias glast='git log -1 HEAD --stat' # git list last commit log msg
 alias gvdiff='git difftool -t vimdiff -y' # git diff w/ vimtool skip prompt
 alias gsc='git rev-list --all | xargs git grep -F' # search within git commits
 
+# tree cmd shows only dirs including hidden, in the current dir
+alias lsd="tree -da -L 1"
+
 # Junkyard
 #
 # Not sure why I'm keeping the stuff down here around
