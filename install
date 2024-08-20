@@ -2,5 +2,6 @@
 echo "Installing..."
 
 # link shell settings to $HOME
-ln -sv /Users/erik/.dotfiles/bash/bashrc ~/.bashrc
+echo "About to create a sym link to the .dotfiles/.bashrc in your home dir"
+ln -sv /Users/$USER/.dotfiles/bash/bashrc ~/.bashrc
 
