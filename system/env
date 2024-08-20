@@ -29,3 +29,7 @@ PROMPT_COMMAND='history -a;history -n'
 # at the archey help via the -h flag from the cmdline
 # Install archey via homebrew (brew install archey)
 archey
+
+# efw - 08/19/24
+# adding shortcut to launch Kafka
+export KAFKA_HOME=~/dev/apps/kafka_2.13-3.8.0
