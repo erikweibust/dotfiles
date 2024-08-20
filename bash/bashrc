@@ -2,12 +2,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # efw - 05/16/24
 echo "loaded .bashrc- $(date)" >> startup.txt
 
-for DOTFILE in `find /Users/erik/.dotfiles/system`
+for DOTFILE in `find /Users/erikweibust/.dotfiles/system`
 do
    [ -f $DOTFILE ] && source $DOTFILE
 done
 
-for DOTFILE in `find /Users/erik/.dotfiles/.secret`
+for DOTFILE in `find /Users/erikweibust/.dotfiles/.secret`
 do
    [ -f $DOTFILE ] && source $DOTFILE
 done
@@ -16,5 +16,5 @@ done
 # https://smallsharpsoftwaretools.com/tutorials/use_modern_bash_on_macos/
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/erik/.sdkman"
-[[ -s "/Users/erik/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/erik/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/erikweibust/.sdkman"
+[[ -s "/Users/erikweibust/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/erikweibust/.sdkman/bin/sdkman-init.sh"
