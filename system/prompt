@@ -1,3 +1,5 @@
+echo "Processing prompt..."
+
 # For more info on customizing my starship prompt:
 # https://starship.rs/
 

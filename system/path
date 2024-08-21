@@ -1,3 +1,5 @@
+echo "Processing path..."
+
 # Want to make the java I set with JAVA_HOME the first in the path
 export PATH="$JAVA_HOME/bin:$PATH"
 

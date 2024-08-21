@@ -1,3 +1,5 @@
+echo "Processing functions..."
+
 # change java version
 function j10 {
    export JAVA_HOME=$(/usr/libexec/java_home -v 10);
