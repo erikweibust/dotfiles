@@ -5,6 +5,22 @@
 
 ## Customizations block end
 
+# From GitHub /VisualStudioCode.gitignore - 8/21/24
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+# END - From GitHub /VisualStudioCode.gitignore - 8/21/24
+
+# From GitHub /macOS.gitignore - 8/21/24
 # General
 .DS_Store
 .AppleDouble
@@ -32,3 +48,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+# From GitHub /macOS.gitignore - 8/21/24
