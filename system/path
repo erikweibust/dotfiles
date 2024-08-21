@@ -2,7 +2,6 @@ echo "Processing path..."
 
 # Want to make the java I set with JAVA_HOME the first in the path
 export PATH="$JAVA_HOME/bin:$PATH"
-echo "Just added Java to PATH"
 
 # from Small Sharp Tools book - switch from BSD to GNU
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -15,5 +14,4 @@ export KAFKA_HOME=~/dev/apps/kafka_2.13-3.8.0
 
 # adding Kafka to my path
 export PATH="$KAFKA_HOME/bin:$PATH"
-echo "Just added Kafka to PATH"
 # END efw - 08/19/24
