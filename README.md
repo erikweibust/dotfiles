@@ -25,6 +25,6 @@ This only works if there is a .profile that loads .bashrc
 I'm sure there is more but I'll feel better when crossing the above off.
 
 ## Credits
-I followed allong with the following two blogs
+I followed along with the following two blogs
 1. (http://iamnotmyself.com/2020/11/10/your-terminal-and-you-dotfiles/)
 2. (https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
