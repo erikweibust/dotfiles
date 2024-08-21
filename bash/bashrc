@@ -1,3 +1,5 @@
+echo "Processing bashrc..."
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # efw - 05/16/24
 echo "loaded .bashrc- $(date)" >> startup.txt
