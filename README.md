@@ -17,12 +17,12 @@ This only works if there is a .profile that loads .bashrc
 
 ## TODO:
 * bash_profile
-* vimrc
+~~* vimrc~~
 * ssh
 * nonorc
 * gitconf
 
-I'm sure there is more but I'll feel better when crossing the above off.
+I'm sure there is more but I'll feel better when crossing the above off. Check [my Issues](https://github.com/erikweibust/dotfiles/issues) for what I want to do and the improvements I've already made.
 
 ## Credits
 I followed along with the following two blogs
