@@ -17,7 +17,7 @@ This only works if there is a .profile that loads .bashrc
 
 ## TODO:
 * bash_profile
-~~* vimrc~~
+* ~~vimrc~~
 * ssh
 * nonorc
 * gitconf
