@@ -1,5 +1,23 @@
 #\!/usr/bin/env sh
 echo "Installing..."
 
-echo "About to create a sym link to the .dotfiles/.bashrc in your home dir"
-ln -sv $HOME/.dotfiles/bash/bashrc ~/.bashrc
+# Check if the file does not exist
+if [ ! -f "~/.bashrc" ]; then
+#if [ ! -f "~/.bashrc" ]; then
+    echo "No .bashrc present. We will create one."
+    # Add your commands here
+    ln -sv $HOME/.dotfiles/bash/bashrc ~/.bashrc
+else
+    echo "You've already added your .bashrc"
+fi
+#echo "About to create a sym link to the .dotfiles/.bashrc in your home dir"
+
+echo "Now we are adding application config files..."
+# Check if the file does not exist
+if [ ! -f "~/.vimrc" ]; then
+    echo "No .vimrc present. We will create one."
+    # Add your commands here
+    ln -sv $HOME/.dotfiles/config/vimrc ~/.vimrc
+else
+    echo "You've already added your .vimrc"
+fi
