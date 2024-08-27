@@ -12,15 +12,18 @@ To use:
 2. mv dotfile .dotfiles
 3. run ~/.dotfiles/install
 
-** to consider or improve:
-This only works if there is a .profile that loads .bashrc
+### Note
+
+This repo will not overwrite an existing .vimrc or .bashrc. If you have system config currently defined in those files you should move it to the dotfiles corresponding files (i.e., `bash/bashrc` or `system/*`)
+
+**To consider or improve**
+This only works if there is a `~/.profile` or `~/.bash_profile` that loads .bashrc
 
 ## TODO:
 * bash_profile
 * ~~vimrc~~
 * ssh
-* nonorc
-* gitconf
+* gitconfig
 
 I'm sure there is more but I'll feel better when crossing the above off. Check [my Issues](https://github.com/erikweibust/dotfiles/issues) for what I want to do and the improvements I've already made.
 
