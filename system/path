@@ -15,3 +15,13 @@ export KAFKA_HOME=~/dev/apps/kafka_2.13-3.8.0
 # adding Kafka to my path
 export PATH="$KAFKA_HOME/bin:$PATH"
 # END efw - 08/19/24
+
+# efw - 08/29/24
+# adding $USER bin to PATH
+if [ -d ~/bin ]; then
+    echo "adding $USER/bin to PATH"
+    export PATH="~/bin:$PATH"
+else
+    echo "No $USER/bin to add"
+fi
+# END efw - 08/29/24
