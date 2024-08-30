@@ -78,3 +78,13 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" efw - 08/30/24
+" set default tab to 3 and use spaces
+set tabstop=3
+set shiftwidth=3
+set smarttab "use autotabs for certain code
+set ruler " always shows location in file (line #)
+set showmatch "shows matching braces
+" end 08/30/24
+
