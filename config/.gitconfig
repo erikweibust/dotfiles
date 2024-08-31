@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Erik Weibust
+	email = erikweibust@gmail.com
+	username = erikweibust
+
+[alias]
+trashit = !git reset --hard HEAD && git clean -f -d
+	loga = log --oneline --graph --all
+	aliases = config --list --show-origin
+[init]
+	defaultBranch = master
+[push]
+	default = simple

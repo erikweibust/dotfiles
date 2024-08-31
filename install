@@ -18,4 +18,20 @@ else
     echo "You've already added your .vimrc"
 fi
 
+# Check if the git files do not exist
+if [ ! -f ~/.gitconfig ]; then
+    echo "No .gitconfig present. We will create one."
+    ln -sv $HOME/.dotfiles/config/gitconfig ~/.gitconfig
+else
+    echo "You've already added your .gitconfig"
+fi
+
+if [ ! -f ~/.gitignore-global ]; then
+    echo "No .gitignore-global present. We will create one."
+    ln -sv $HOME/.dotfiles/config/gitignore-global ~/.gitignore-global
+else
+    echo "You've already added your .gitignore-global"
+fi
+
+
 echo "Finished. Isn't this an easier way to keep your dotfiles in sync? 😎"
