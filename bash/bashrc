@@ -2,7 +2,7 @@ echo "Processing bashrc..."
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # efw - 05/16/24
-echo "loaded .bashrc- $(date)" >> ~/.startup.txt
+echo "loaded .bashrc - $(date)" >> ~/.startup.txt
 
 # changing from hard-coded dir to variables but not testing. revert to this format if errors
 #for DOTFILE in `find /Users/username-was-mine/.dotfiles/system`
