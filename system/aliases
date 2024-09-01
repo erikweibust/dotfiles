@@ -1,4 +1,4 @@
-echo "Processing aliases..."
+echo "Processing aliases..." >> ~/.startup.txt
 
 # I'm not sure where I got this alias file from... Therefore, I have 
 # commented out most of them until I know what they do.

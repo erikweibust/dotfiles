@@ -33,5 +33,4 @@ else
     echo "You've already added your .gitignore-global"
 fi
 
-
 echo "Finished. Isn't this an easier way to keep your dotfiles in sync? 😎"

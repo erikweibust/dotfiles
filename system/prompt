@@ -1,4 +1,4 @@
-echo "Processing prompt..."
+echo "Processing prompt..." >> ~/.startup.txt
 
 # For more info on customizing my starship prompt:
 # https://starship.rs/

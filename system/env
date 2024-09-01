@@ -1,4 +1,4 @@
-echo "Processing env..."
+echo "Processing env..." >> ~/.startup.txt
 
 # configure bash cmd-line to use vim keyboard cmds
 set -o vi

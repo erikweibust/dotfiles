@@ -1,4 +1,4 @@
-echo "Processing functions..."
+echo "Processing functions..." >> ~/.startup.txt
 
 # change java version
 function j10 {

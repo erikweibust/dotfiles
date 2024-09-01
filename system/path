@@ -1,4 +1,5 @@
-echo "Processing path..."
+echo "Processing path..." >> ~/.startup.txt
+
 
 # Want to make the java I set with JAVA_HOME the first in the path
 export PATH="$JAVA_HOME/bin:$PATH"
@@ -19,9 +20,9 @@ export PATH="$KAFKA_HOME/bin:$PATH"
 # efw - 08/29/24
 # adding $USER bin to PATH
 if [ -d ~/bin ]; then
-    echo "adding $USER/bin to PATH"
+    echo "adding $USER/bin to PATH" >> ~/.startup.txt
     export PATH="~/bin:$PATH"
 else
-    echo "No $USER/bin to add"
+    echo "No $USER/bin to add" >> ~/.startup.txt
 fi
 # END efw - 08/29/24
