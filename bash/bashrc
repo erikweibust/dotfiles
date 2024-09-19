@@ -10,10 +10,14 @@ do
    [ -f $DOTFILE ] && source $DOTFILE
 done
 
-for DOTFILE in `find $HOME/.dotfiles/.secret`
-do
-   [ -f $DOTFILE ] && source $DOTFILE
-done
+if [ -d ~/.dotfiles/.secret ]; then
+   for DOTFILE in `find $HOME/.dotfiles/.secret`
+   do
+      [ -f $DOTFILE ] && source $DOTFILE
+   done
+else
+   echo "no secrets here"
+fi
 
 # used this site to update to latest version of Bash
 # https://smallsharpsoftwaretools.com/tutorials/use_modern_bash_on_macos/
