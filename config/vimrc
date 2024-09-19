@@ -88,3 +88,7 @@ set ruler " always shows location in file (line #)
 set showmatch "shows matching braces
 " end 08/30/24
 
+" efw - 09/19/24
+set autoindent
+set expandtab " use spaces when user hits tab key
+" end - 09/19/24
