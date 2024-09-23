@@ -30,6 +30,6 @@ PROMPT_COMMAND='history -a;history -n'
 # term screen. Issues may occur if offline which can be fixed by looking
 # at the archey help via the -h flag from the cmdline
 # Install archey via homebrew (brew install archey)
-if [[ -f archey ]]; then
+if type archey ; then
     archey
 fi
