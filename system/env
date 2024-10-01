@@ -31,5 +31,15 @@ PROMPT_COMMAND='history -a;history -n'
 # at the archey help via the -h flag from the cmdline
 # Install archey via homebrew (brew install archey)
 if type archey ; then
+    echo "in if"
     archey
+else
+    echo "no archey found"
 fi
+
+# efw - 10/01/24
+# add support for bat config file
+#export BAT_THEME="Visual Studio Dark+"
+# not sure why this is called path and not file?
+export BAT_CONFIG_PATH=~/.dotfiles/config/bat-config
+# end
