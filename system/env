@@ -41,5 +41,5 @@ fi
 # add support for bat config file
 #export BAT_THEME="Visual Studio Dark+"
 # not sure why this is called path and not file?
-export BAT_CONFIG_PATH=~/.dotfiles/config/bat-config
+export BAT_CONFIG_PATH=~/.dotfiles/config/bat.conf
 # end
