@@ -81,14 +81,15 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " efw - 08/30/24
 " set default tab to 3 and use spaces
-set tabstop=3
-set shiftwidth=3
 set smarttab "use autotabs for certain code
 set ruler " always shows location in file (line #)
 set showmatch "shows matching braces
 " end 08/30/24
 
 " efw - 09/19/24
-set autoindent
-set expandtab " use spaces when user hits tab key
+set autoindent   " clearly this autoindents when you hit enter
+set expandtab    " use spaces when user hits tab key
+set tabstop=3    " use 3 spaces for indents
+set shiftwidth=3 " manages indenting when you use >> or << operators
 " end - 09/19/24
+
