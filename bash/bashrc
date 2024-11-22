@@ -16,7 +16,7 @@ if [ -d ~/.dotfiles/.secret ]; then
       [ -f $DOTFILE ] && source $DOTFILE
    done
 else
-   echo "no secrets here"
+   echo "no secrets found"
 fi
 
 # used this site to update to latest version of Bash
