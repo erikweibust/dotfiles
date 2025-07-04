@@ -78,6 +78,8 @@ alias dp='cd $HOME/dev/projects; lart'
 # shortcut names for longer app/utility names
 alias gc="groovyConsole"
 
+alias python=python3
+
 # git shortcuts
 alias gs="git status"
 alias grv="git remote -v"
