@@ -83,9 +83,11 @@ alias python=/usr/local/bin/python3
 # git shortcuts
 alias gs="git status"
 alias grv="git remote -v"
+alias gbv="git branch -v"
 alias gpom="git push origin master"
 alias gpomn="git push origin main"
 alias glo='git log --oneline'
+alias gloag='git log --oneline --all --graph'
 alias gcm='git commit -m'
 alias glast='git log -1 HEAD --stat' # git list last commit log msg
 alias gvdiff='git difftool -t vimdiff -y' # git diff w/ vimtool skip prompt
