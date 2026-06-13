@@ -9,6 +9,14 @@ else
     echo "You've already added your .bashrc"
 fi
 
+# Login-shell entry point. Just loads .bashrc.
+if [ ! -f ~/.bash_profile ]; then
+    echo "No .bash_profile present. We will create one."
+    ln -sv $HOME/.dotfiles/bash/bash_profile ~/.bash_profile
+else
+    echo "You've already added your .bash_profile"
+fi
+
 echo "Now we're adding application config files..."
 # Check if the file does not exist
 if [ ! -f ~/.vimrc ]; then
@@ -31,6 +39,15 @@ if [ ! -f ~/.gitignore-global ]; then
     ln -sv $HOME/.dotfiles/config/gitignore-global ~/.gitignore-global
 else
     echo "You've already added your .gitignore-global"
+fi
+
+# Ghostty terminal config (keeps cursor / shell-integration behavior identical across machines)
+if [ ! -f ~/.config/ghostty/config ]; then
+    echo "No Ghostty config present. We will create one."
+    mkdir -p ~/.config/ghostty
+    ln -sv $HOME/.dotfiles/config/ghostty ~/.config/ghostty/config
+else
+    echo "You've already added your Ghostty config"
 fi
 
 echo "Finished. Isn't this an easier way to keep your dotfiles in sync? 😎"
