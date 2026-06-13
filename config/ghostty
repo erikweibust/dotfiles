@@ -1,0 +1,2 @@
+# Ghostty config — symlinked from ~/.dotfiles/config/ghostty
+shell-integration-features = no-cursor
