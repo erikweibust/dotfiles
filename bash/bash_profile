@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Loaded by LOGIN shells (Terminal / Ghostty on macOS).
+# All real setup lives in bashrc + system/*; this file just loads bashrc.
+# efw
+echo "loaded .bash_profile - $(date)" >> ~/.startup.txt
+
+# Load bashrc, which sources everything in ~/.dotfiles/system and ~/.dotfiles/.secret
+if [ -f ~/.bashrc ] || [ -L ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
+# NOTE: do NOT add machine-specific or installer PATH lines here.
+# Put those in ~/.dotfiles/.secret/local.sh (gitignored, sourced by bashrc)
+# so they stay local to this machine and never dirty the tracked repo.
+
+echo "finished loaded .bash_profile - $(date)" >> ~/.startup.txt
