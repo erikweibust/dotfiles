@@ -111,6 +111,5 @@ alias l="echo aliases are great!"
 
 # brew bundle workflow (Brewfile path comes from HOMEBREW_BUNDLE_FILE in system/env)
 alias brewcheck="brew bundle check --verbose"   # what is missing on this machine
-alias brewdrift="brew bundle cleanup"           # installed but not in the Brewfile yet
 alias brewdump="brew bundle dump --force"       # refresh Brewfile from installed packages
 alias brewinstall="brew bundle install"         # install whatever the Brewfile lists
