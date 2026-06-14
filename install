@@ -9,12 +9,18 @@ else
     echo "You've already added your .bashrc"
 fi
 
-# Login-shell entry point. Just loads .bashrc.
-if [ ! -f ~/.bash_profile ]; then
-    echo "No .bash_profile present. We will create one."
+# Login-shell entry point; just loads .bashrc.
+# Installers (Homebrew, python.org, SDKMAN, ...) often create a real ~/.bash_profile,
+# so back up any existing real file and replace it with the repo symlink.
+if [ -L ~/.bash_profile ]; then
+    echo "Your .bash_profile is already linked."
+elif [ -e ~/.bash_profile ]; then
+    echo "Found an existing .bash_profile; backing it up and linking the repo version."
+    mv -v ~/.bash_profile ~/.bash_profile.bak.$(date +%Y%m%d%H%M%S)
     ln -sv $HOME/.dotfiles/bash/bash_profile ~/.bash_profile
 else
-    echo "You've already added your .bash_profile"
+    echo "No .bash_profile present. We will create one."
+    ln -sv $HOME/.dotfiles/bash/bash_profile ~/.bash_profile
 fi
 
 echo "Now we're adding application config files..."
