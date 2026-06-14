@@ -1,5 +1,9 @@
+tap "anomalyco/tap"
+tap "spring-cli-projects/spring-cli"
 # Search tool like grep, but optimized for programmers
 brew "ack"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Simple system information tool written in Python
 brew "archey4"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -8,6 +12,8 @@ brew "bash"
 brew "bat"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# TIFF library and utilities
+brew "libtiff"
 # Tool for exploring each layer in a docker image
 brew "dive"
 # Command-line tool to interact with exercism.io
@@ -40,6 +46,8 @@ brew "kind"
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Easy and Repeatable Kubernetes Development
 brew "skaffold"
 # Cross-shell prompt for astronauts
@@ -55,6 +63,7 @@ brew "yt-dlp"
 # Terminal-based AI coding assistant
 cask "claude-code"
 cask "font-fantasque-sans-mono"
+cask "font-fantasque-sans-mono-noloopk"
 cask "font-fira-mono"
 cask "font-fira-mono-nerd-font"
 cask "font-hack"
@@ -69,6 +78,8 @@ cask "font-roboto-mono"
 cask "font-roboto-mono-nerd-font"
 cask "font-source-code-pro"
 cask "font-space-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Tool to prevent the system from going into sleep mode
@@ -82,6 +93,7 @@ cask "visual-studio-code"
 vscode "chadalen.vscode-jetbrains-icon-theme"
 vscode "codezombiech.gitignore"
 vscode "davidanson.vscode-markdownlint"
+vscode "github.copilot-chat"
 vscode "github.vscode-pull-request-github"
 vscode "pkief.material-icon-theme"
 vscode "pranaygp.vscode-css-peek"
@@ -91,6 +103,8 @@ vscode "redhat.java"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vmware.vscode-boot-dev-pack"
 vscode "vmware.vscode-spring-boot"
 vscode "vscjava.vscode-gradle"
 vscode "vscjava.vscode-java-debug"
@@ -103,11 +117,5 @@ vscode "vscjava.vscode-spring-initializr"
 vscode "vscodevim.vim"
 vscode "xabikos.javascriptsnippets"
 vscode "zhuangtongfa.material-theme"
-
-# --- kept: installed on the other Mac (eriks-mba), not on this one ---
-cask "font-fantasque-sans-mono-noloopk"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vmware.vscode-boot-dev-pack"
-
-# terminal — now Homebrew-managed (adopted) so it stays in sync
-cask "ghostty"
+npm "@modelcontextprotocol/inspector"
+npm "http-server"
