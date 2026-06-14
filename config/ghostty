@@ -1,2 +1,5 @@
 # Ghostty config — symlinked from ~/.dotfiles/config/ghostty
-shell-integration-features = no-cursor
+# no-cursor:    don't let Ghostty manage the cursor shape (keeps a steady block)
+# ssh-env:      set a safe TERM for SSH sessions automatically
+# ssh-terminfo: install Ghostty's terminfo on remote hosts so xterm-ghostty works over SSH
+shell-integration-features = no-cursor,ssh-env,ssh-terminfo
