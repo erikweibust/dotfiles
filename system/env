@@ -43,3 +43,6 @@ fi
 # not sure why this is called path and not file?
 export BAT_CONFIG_PATH=~/.dotfiles/config/bat.conf
 # end
+
+# Point brew bundle commands at the dotfiles Brewfile by default
+export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
