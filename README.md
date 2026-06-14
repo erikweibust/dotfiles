@@ -61,6 +61,25 @@ from one and pull on the other.
 After a `pull` that changed PATH/aliases/etc., open a new terminal (or `source
 ~/.bashrc`) so it takes effect.
 
+### Brew / Brewfile workflow
+
+`HOMEBREW_BUNDLE_FILE` is set in `system/env`, so every `brew bundle` command targets
+`~/.dotfiles/Brewfile` automatically — no `--file` flag needed anywhere. Shortcuts live
+in `system/aliases`:
+
+- `brewcheck` — `brew bundle check --verbose` (what's missing on this machine)
+- `brewdrift` — `brew bundle cleanup` (installed but not yet recorded in the Brewfile)
+- `brewdump` — `brew bundle dump --force` (rewrite the Brewfile from what's installed)
+- `brewinstall` — `brew bundle install` (install whatever the Brewfile lists)
+
+Routine: installed something new? `brewdrift` to spot it → `brewdump` → commit & push.
+On the other machine: `git pull` → `brewinstall`. A fresh machine gets the whole
+toolchain automatically because `install` now runs `brew bundle install`.
+
+Heads-up: `brewdump` rewrites the Brewfile to match *this* machine, so it can drop
+entries only installed on the *other* Mac — always review `git diff Brewfile` before
+committing (that's how we caught the keeper fonts and VS Code extensions).
+
 ### `install` notes
 
 `install` only creates a symlink if the target doesn't already exist, so it won't
