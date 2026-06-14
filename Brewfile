@@ -108,3 +108,6 @@ vscode "zhuangtongfa.material-theme"
 cask "font-fantasque-sans-mono-noloopk"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vmware.vscode-boot-dev-pack"
+
+# terminal — now Homebrew-managed (adopted) so it stays in sync
+cask "ghostty"
