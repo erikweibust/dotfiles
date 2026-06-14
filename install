@@ -56,4 +56,12 @@ else
     echo "You've already added your Ghostty config"
 fi
 
+# Install Homebrew packages from the Brewfile (formulae, casks, VS Code extensions).
+echo "Installing Homebrew packages from the Brewfile..."
+if command -v brew >/dev/null 2>&1; then
+    brew bundle install --file "$HOME/.dotfiles/Brewfile"
+else
+    echo "Homebrew not found. Install it from https://brew.sh, then re-run this script (or run 'brew bundle install')."
+fi
+
 echo "Finished. Isn't this an easier way to keep your dotfiles in sync? 😎"
