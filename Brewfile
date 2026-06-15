@@ -63,7 +63,6 @@ brew "yt-dlp"
 # Terminal-based AI coding assistant
 cask "claude-code"
 cask "font-fantasque-sans-mono"
-cask "font-fantasque-sans-mono-noloopk"
 cask "font-fira-mono"
 cask "font-fira-mono-nerd-font"
 cask "font-hack"
