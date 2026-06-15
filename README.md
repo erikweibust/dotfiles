@@ -68,17 +68,25 @@ After a `pull` that changed PATH/aliases/etc., open a new terminal (or `source
 in `system/aliases`:
 
 - `brewcheck` — `brew bundle check --verbose` (what's missing on this machine)
-- `brewdrift` — `brew bundle cleanup` (installed but not yet recorded in the Brewfile)
 - `brewdump` — `brew bundle dump --force` (rewrite the Brewfile from what's installed)
 - `brewinstall` — `brew bundle install` (install whatever the Brewfile lists)
 
-Routine: installed something new? `brewdrift` to spot it → `brewdump` → commit & push.
+Routine: installed something new? `brewdump` → review `git diff Brewfile` → commit & push.
 On the other machine: `git pull` → `brewinstall`. A fresh machine gets the whole
 toolchain automatically because `install` now runs `brew bundle install`.
+
+To spot drift (things installed but not yet tracked), run `brewdump` and read the `+`
+lines in `git diff Brewfile`. Don't want them? `git checkout -- Brewfile` discards the
+dump — it only rewrites the file, so nothing is ever uninstalled.
 
 Heads-up: `brewdump` rewrites the Brewfile to match *this* machine, so it can drop
 entries only installed on the *other* Mac — always review `git diff Brewfile` before
 committing (that's how we caught the keeper fonts and VS Code extensions).
+
+Warning: never use `brew bundle cleanup` (the old `brewdrift` shortcut, now removed). It
+*uninstalls* everything not listed in the Brewfile — formulae, casks, even VS Code
+extensions — and prompts to delete. Use the `brewdump` + `git diff` method above to
+inspect drift safely.
 
 ### `install` notes
 
