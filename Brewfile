@@ -46,6 +46,11 @@ brew "kind"
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# CellarConnect project dependencies
+brew "mysql", restart_service: :changed
+brew "redis", restart_service: :changed
+# End CellarConnect project dependencies
+
 # AI coding agent, built for the terminal
 brew "opencode"
 # Easy and Repeatable Kubernetes Development
@@ -115,5 +120,7 @@ vscode "vscjava.vscode-spring-initializr"
 vscode "vscodevim.vim"
 vscode "xabikos.javascriptsnippets"
 vscode "zhuangtongfa.material-theme"
+npm "@angular/cli"
 npm "@modelcontextprotocol/inspector"
 npm "http-server"
+

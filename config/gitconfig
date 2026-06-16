@@ -13,3 +13,5 @@ trashit = !git reset --hard HEAD && git clean -f -d
 	defaultBranch = master
 [push]
 	default = simple
+[credential]
+	helper = osxkeychain
