@@ -67,11 +67,24 @@ After a `pull` that changed PATH/aliases/etc., open a new terminal (or `source
 `~/.dotfiles/Brewfile` automatically — no `--file` flag needed anywhere. Shortcuts live
 in `system/aliases`:
 
-- `brewcheck` — `brew bundle check --verbose` (what's missing on this machine)
-- `brewdump` — `brew bundle dump --force` (rewrite the Brewfile from what's installed)
-- `brewinstall` — `brew bundle install` (install whatever the Brewfile lists)
+- `brewcheck` — `brew bundle check --verbose` (read-only: what's missing on this machine)
+- `brewinstall` — `brew bundle install` (list → machine: installs whatever the Brewfile lists that's missing here)
+- `brewdump` — `brew bundle dump --force` (machine → list: rewrites the Brewfile to match what's installed *on this machine, right now*)
 
-Routine: installed something new? `brewdump` → review `git diff Brewfile` → commit & push.
+**The rule that matters:** the Brewfile is shared across every machine. Anything
+committed to it gets installed everywhere the next time that machine runs
+`brewinstall` — there's no such thing as a "just for this machine" entry. So when
+reviewing a `brewdump` diff, the question isn't "is this accurate to what's installed
+here" — it's **"do I want this installed on every machine?"** If not, don't commit that
+line.
+
+(This is exactly how CellarConnect's `mysql`/`redis`/`@angular/cli` ended up installed
+and auto-started on a machine that didn't need them — they were committed to the shared
+Brewfile from the machine that *did* need them, and the next `brewinstall` elsewhere
+dutifully installed them too.)
+
+Routine: installed something new you want everywhere? `brewdump` → review `git diff
+Brewfile` with the rule above → commit & push.
 On the other machine: `git pull` → `brewinstall`. A fresh machine gets the whole
 toolchain automatically because `install` now runs `brew bundle install`.
 
