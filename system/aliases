@@ -113,3 +113,8 @@ alias l="echo aliases are great!"
 alias brewcheck="brew bundle check --verbose"   # what is missing on this machine
 alias brewdump="brew bundle dump --force"       # refresh Brewfile from installed packages
 alias brewinstall="brew bundle install"         # install whatever the Brewfile lists
+
+# Project-specific Brewfiles: tracked in the dotfiles repo but never touched by
+# `brewinstall`/`brewcheck`/`brewdump` above (those only see HOMEBREW_BUNDLE_FILE).
+# Install manually, only on machines that need the project's deps.
+alias brewinstall-cellarconnect="brew bundle install --file=$HOME/.dotfiles/Brewfile.cellarconnect"

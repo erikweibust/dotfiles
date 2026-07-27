@@ -1,0 +1,12 @@
+# CellarConnect project dependencies.
+#
+# Not part of the shared Brewfile — these are machine-specific, not something
+# every machine running `brewinstall` should get. Install manually on a
+# machine that's working on CellarConnect:
+#
+#   brewinstall-cellarconnect
+#
+# (or: brew bundle install --file=~/.dotfiles/Brewfile.cellarconnect)
+brew "mysql", restart_service: :changed
+brew "redis", restart_service: :changed
+npm "@angular/cli"

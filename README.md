@@ -101,6 +101,16 @@ Warning: never use `brew bundle cleanup` (the old `brewdrift` shortcut, now remo
 extensions — and prompts to delete. Use the `brewdump` + `git diff` method above to
 inspect drift safely.
 
+#### Project-specific dependencies
+
+Deps needed for one project but not every machine (e.g. CellarConnect's `mysql`,
+`redis`, `@angular/cli`) go in their own `Brewfile.<project>` in this repo instead of
+the shared `Brewfile` — tracked in git, but never picked up by `brewinstall` /
+`brewcheck` / `brewdump`, since those only ever look at `HOMEBREW_BUNDLE_FILE`. Install
+one manually with its own alias, e.g. `brewinstall-cellarconnect`, which runs
+`brew bundle install --file=~/.dotfiles/Brewfile.<project>`. Add a new project's
+Brewfile and alias the same way.
+
 ### `install` notes
 
 `install` only creates a symlink if the target doesn't already exist, so it won't
