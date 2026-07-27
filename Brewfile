@@ -1,9 +1,7 @@
 tap "anomalyco/tap"
-tap "spring-cli-projects/spring-cli"
+tap "spring-attic/spring-cli", "https://github.com/spring-attic/homebrew-spring-cli.git"
 # Search tool like grep, but optimized for programmers
 brew "ack"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Simple system information tool written in Python
 brew "archey4"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -53,6 +51,8 @@ brew "redis", restart_service: :changed
 
 # AI coding agent, built for the terminal
 brew "opencode"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Easy and Repeatable Kubernetes Development
 brew "skaffold"
 # Cross-shell prompt for astronauts
