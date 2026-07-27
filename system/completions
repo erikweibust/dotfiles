@@ -1,0 +1,4 @@
+# Load bash completions for brew-installed tools (git, gh, kubectl, etc.)
+if [ -f /opt/homebrew/etc/profile.d/bash_completion.sh ]; then
+    source /opt/homebrew/etc/profile.d/bash_completion.sh
+fi

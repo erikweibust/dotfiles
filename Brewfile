@@ -1,5 +1,8 @@
 tap "anomalyco/tap"
 tap "spring-attic/spring-cli", "https://github.com/spring-attic/homebrew-spring-cli.git"
+# Shell command tab-completion for brew-installed tools (git, gh, kubectl, etc.)
+brew "bash-completion"
+
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Simple system information tool written in Python
