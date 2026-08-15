@@ -21,3 +21,15 @@ trashit = !git reset --hard HEAD && git clean -f -d
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.dotfiles/config/allowed_signers
+[core]
+	autocrlf = input
+
+[include]
+	path = ~/.gitconfig.local
+[includeIf "gitdir:~/dev/projects/"]
+	path = ~/.dotfiles/config/gitconfig-herodevs
