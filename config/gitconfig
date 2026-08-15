@@ -15,3 +15,9 @@ trashit = !git reset --hard HEAD && git clean -f -d
 	default = simple
 [credential]
 	helper = osxkeychain
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

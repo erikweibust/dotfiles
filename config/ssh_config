@@ -1,0 +1,14 @@
+# SSH config — symlinked from ~/.dotfiles/config/ssh_config to ~/.ssh/config
+#
+# NOTE: this repo is PUBLIC. Anything machine-specific or internal (jump hosts,
+# customer boxes, internal hostnames) goes in ~/.ssh/config.local, which is not
+# tracked. The Include must stay at the top: ssh uses the FIRST value it finds
+# for each keyword, so local entries win over the defaults below.
+
+Include ~/.ssh/config.local
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/id_rsa
