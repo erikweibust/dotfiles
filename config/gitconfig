@@ -1,12 +1,23 @@
 # This is Git's per-user configuration file.
+#
+# IDENTITY: there is deliberately no global user.email. useConfigOnly makes git
+# refuse to guess one, so a repo outside the includeIf trees below fails loudly
+# instead of committing under the wrong address. Fix those with a one-off:
+#   git config user.email you@wherever
+#
+#   ~/dev/work/      -> erik.weibust@herodevs.com
+#   ~/dev/personal/  -> erikweibust@gmail.com
+#   ~/.dotfiles/     -> erikweibust@gmail.com
+#
+# Signing key + commit.gpgsign live in ~/.gitconfig.local (per machine, untracked).
+
 [user]
-# Please adapt and uncomment the following lines:
 	name = Erik Weibust
-	email = erikweibust@gmail.com
 	username = erikweibust
+	useConfigOnly = true
 
 [alias]
-trashit = !git reset --hard HEAD && git clean -f -d
+	trashit = !git reset --hard HEAD && git clean -f -d
 	loga = log --oneline --graph --all
 	aliases = config --list --show-origin
 [init]
@@ -31,5 +42,9 @@ trashit = !git reset --hard HEAD && git clean -f -d
 
 [include]
 	path = ~/.gitconfig.local
-[includeIf "gitdir:~/dev/projects/"]
+[includeIf "gitdir:~/dev/work/"]
 	path = ~/.dotfiles/config/gitconfig-herodevs
+[includeIf "gitdir:~/dev/personal/"]
+	path = ~/.dotfiles/config/gitconfig-personal
+[includeIf "gitdir:~/.dotfiles/"]
+	path = ~/.dotfiles/config/gitconfig-personal
