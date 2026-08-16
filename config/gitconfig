@@ -17,6 +17,13 @@
 	useConfigOnly = true
 
 [alias]
+
+# to know which email I'm using. Think of this as am I working on a personal or work
+# project.
+   whoami = "!echo Name:  $(git config user.name); \
+              echo Email: $(git config user.email); \
+              echo Key:   $(git config user.signingkey)"
+
 	trashit = !git reset --hard HEAD && git clean -f -d
 	loga = log --oneline --graph --all
 	aliases = config --list --show-origin
