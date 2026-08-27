@@ -22,10 +22,12 @@ fi
 # used this site to update to latest version of Bash
 # https://smallsharpsoftwaretools.com/tutorials/use_modern_bash_on_macos/
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
+## this was needed for Claude Code
+export PATH="$HOME/.local/bin:$PATH"
 
 # Load Angular CLI autocompletion, if installed (e.g. for CellarConnect).
 command -v ng >/dev/null 2>&1 && source <(ng completion script)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
